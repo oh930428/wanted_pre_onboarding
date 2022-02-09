@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 const Title = styled.span`
+  display: block;
+  margin-top: 20px;
   color: #37352f;
   font-size: 20px;
 `;
@@ -11,7 +13,6 @@ const Wrapper = styled.div`
   border: 1px solid #d4d4d4;
   border-radius: 10px;
   box-shadow: 2px 2px #e2e2e2;
-  padding: 10px;
   margin: 10px 0px;
   display: flex;
   align-items: center;
