@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import Container from "./component/Container";
+import Modal from "./component/Modal";
 import Toggle from "./component/Toggle";
 
 const GlobalStyle = createGlobalStyle`
@@ -20,6 +21,9 @@ function App() {
       <GlobalStyle />
       <Container title="Toggle">
         <Toggle />
+      </Container>
+      <Container title="Modal">
+        <Modal />
       </Container>
     </>
   );
