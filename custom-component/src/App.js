@@ -3,6 +3,7 @@ import reset from "styled-reset";
 import Container from "./component/Container";
 import Modal from "./component/Modal";
 import Toggle from "./component/Toggle";
+import Tab from "./component/Tab";
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
@@ -24,6 +25,9 @@ function App() {
       </Container>
       <Container title="Modal">
         <Modal />
+      </Container>
+      <Container title="Tab">
+        <Tab />
       </Container>
     </>
   );
