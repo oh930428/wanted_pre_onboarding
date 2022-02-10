@@ -4,6 +4,7 @@ import Container from "./component/Container";
 import Modal from "./component/Modal";
 import Toggle from "./component/Toggle";
 import Tab from "./component/Tab";
+import ClickToEdit from "./component/ClickToEdit";
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
@@ -28,6 +29,9 @@ function App() {
       </Container>
       <Container title="Tab">
         <Tab />
+      </Container>
+      <Container title="ClickToEdit">
+        <ClickToEdit />
       </Container>
     </>
   );
