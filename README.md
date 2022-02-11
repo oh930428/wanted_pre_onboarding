@@ -55,6 +55,32 @@
 
 ---
 
+
+## ClickToEdit
+
+- 구현한 방법과 이유에 대한 간략한 내용
+
+  - styled commponent를 사용하여 각 태그를 객체 처럼 사용
+  - useState hook을 사용하여 (userName, userAge) FormInput 텍스트를 변경 시 입력
+  - (changeName, changeAge) FormInput 텍스트를 변경 후 (FormNameWrapper,FormAgeWrapper)에  포함되지 않은 외부를 클릭시 변경한 텍스트를 입력
+  - (changeName, changeAge) 변경된 텍스트를 span 태그 안에 적용
+
+- 구현하면서 어려웠던 점과 해결 방법 (Error Handling Log)
+  1. FormInput 태그 안에서의 텍스트 변경시 상태 관리 가능했지만 외부를 클릭 시 상태 관리는 어려웠다
+    => 두가지 경우를 먼저 나누었다 첫번째는 FormInput 태그에서 텍스트를 변경할때 필요한 useState 함수를 생성하고
+    => useRef함수를 생성하여 FormNameWrapper와 FormAgeWrapper로 각각 나누어 외부를 클릭 할 수 있게 만들고
+    => 외부 클릭이 성공 후 외부 클릭을 행동 되어지면 span 태그 안에 적용하니 해결!
+  2. MouseEvent를 처음 사용
+    => mdn 문서를 통해 mousedown 이벤트(처음 누르는 순간 시작)를 적용!
+
+- 자세한 실행 방법
+  - 이름, 나이 각 FormInput에 텍스트를 입력(수정) 
+  - FormInput에 입력(수정)을 한 텍스트는 (userName, userAge)에 입력
+  - FormNameWrapper 또는 FormAgeWrapper에 포함되지 않는 곳을 클릭(clickedOutside) 시
+  - FormInput에 입력(수정)한 값을 (changeName, changeAge)에 입력 span에 적용 
+
+---
+
 ## Tag
 
 - 구현한 방법과 이유에 대한 간략한 내용
@@ -74,4 +100,4 @@
   - css 적용된 Tag 출력
   - 여러번의 input 태그에 텍스트를 입력 시 tag(배열)에 저장 되고 저장 된 만큼 css 적용된 Tag 출력
 
-
+---
