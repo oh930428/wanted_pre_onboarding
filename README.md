@@ -1,6 +1,6 @@
 # wanted_pre_onboarding
 ## Toggle
-  > 구현한 방법과 이유에 대한 간략한 내용
+  -- 구현한 방법과 이유에 대한 간략한 내용
     => styled commponent를 사용하여 각 태그를 객체 처럼 사용
     => useState hook을 사용하여 토글 스위치 상태 관리
 
