@@ -54,3 +54,24 @@
   - TabContents에 쓰여진 문장에 tabNum 상태값을 적용하여 TabItem를 클릭 시 텍스트 변경
 
 ---
+
+## Tag
+
+- 구현한 방법과 이유에 대한 간략한 내용
+
+  - styled commponent를 사용하여 각 태그를 객체 처럼 사용
+  - useState hook을 사용하여 tags(배열) 상태 관리
+  - input 태그에 텍스트을 입력 후 Enter(키보드 입력) 시 
+  - tags에 입력 (여러개의 tags를 입력 가능하게 하기위해 배열로 관리)
+
+- 구현하면서 어려웠던 점과 해결 방법 (Error Handling Log)
+  1. 여러개의 Tag 생성 후 input 태그 크기 변화와 focus 될 때 border의 색깔 변경 미적용 되는 점
+    => TagInputWrapper에 선택자 :focus-within를 사용하여 자식 요소인 input 태그에서 포커스 된 경우까지 스타일 적용되어 해결!
+
+- 자세한 실행 방법
+  - input 태그에 텍스트를 입력한다
+  - Enter(키보드 입력) 시 addTags 함수 실행 되며 입력한 텍스트 tag(배열)에 입력 
+  - css 적용된 Tag 출력
+  - 여러번의 input 태그에 텍스트를 입력 시 tag(배열)에 저장 되고 저장 된 만큼 css 적용된 Tag 출력
+
+
