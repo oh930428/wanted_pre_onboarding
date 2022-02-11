@@ -66,6 +66,7 @@
   - (changeName, changeAge) 변경된 텍스트를 span 태그 안에 적용
 
 - 구현하면서 어려웠던 점과 해결 방법 (Error Handling Log)
+
   1. FormInput 태그 안에서의 텍스트 변경시 상태 관리 가능했지만 외부를 클릭 시 상태 관리는 어려웠다
     => 두가지 경우를 먼저 나누었다 첫번째는 FormInput 태그에서 텍스트를 변경할때 필요한 useState 함수를 생성하고
     => useRef함수를 생성하여 FormNameWrapper와 FormAgeWrapper로 각각 나누어 외부를 클릭 할 수 있게 만들고
@@ -91,6 +92,7 @@
   - tags에 입력 (여러개의 tags를 입력 가능하게 하기위해 배열로 관리)
 
 - 구현하면서 어려웠던 점과 해결 방법 (Error Handling Log)
+
   1. 여러개의 Tag 생성 후 input 태그 크기 변화와 focus 될 때 border의 색깔 변경 미적용 되는 점
     => TagInputWrapper에 선택자 :focus-within를 사용하여 자식 요소인 input 태그에서 포커스 된 경우까지 스타일 적용되어 해결!
 
